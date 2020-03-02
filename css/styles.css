@@ -1,0 +1,74 @@
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+a {
+  text-decoration: none;
+  color: #ffffff;
+}
+.navbar {
+  background-color: #0063b1;
+}
+.parent i {
+  margin-right: 1.5em;
+}
+.navigation {
+  margin: 0 auto;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+}
+.navigation a {
+  padding: 1em;
+  display: block;
+}
+@media (min-width: 768px) {
+  .navigation {
+    flex-direction: row;
+  }
+}
+.link {
+  overflow: hidden;
+}
+.link:target .submenu {
+  max-height: 19em;
+}
+@media (min-width: 768px) {
+  .link {
+    flex: 1;
+    position: relative;
+    overflow: visible;
+  }
+  .link .submenu {
+    position: absolute;
+    width: 100%;
+  }
+}
+.submenu {
+  background-color: #0063f2;
+  max-height: 0;
+  transition: 0.8s;
+}
+@media (min-width: 768px) {
+  .submenu a {
+    display: none;
+  }
+  .link:target .submenu a {
+    display: block;
+  }
+}
+.submenu a:hover {
+  background-color: rgb(58, 58, 57);
+}
